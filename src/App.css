@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding: 0;;
   font-family: 'Inter', sans-serif;
-  background: #282D35;
   height: 100vh;
   overflow: hidden;
 }
@@ -21,6 +20,15 @@ body {
   padding: 30px 20px;
 }
 
+.nav-light {
+  height: 90px;
+  background: rgb(236, 217, 217);
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+
 .nav--title , .nav--info {
   margin: 0;
 }
@@ -30,6 +38,12 @@ body {
   margin-right: 7px;
 }
 
+.light-nav--img {
+  width: 35px;
+  margin-right: 7px;
+  mix-blend-mode: darken;
+}
+
 .nav--title {
   margin-right: auto;
   color: #61DAFB;
@@ -37,14 +51,77 @@ body {
   font-weight: 700;
 }
 
+.nav-light--title {
+  margin-right: auto;
+  color: rgb(31, 31, 221);
+  font-size: 22px;
+  font-weight: 700;
+}
+
 .nav--info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
   color: #DEEBF8;
   font-weight: 600;
+}
+
+.nav-light--info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  color: rgb(31, 31, 221);
+  font-weight: 600;
+}
+
+
+.darkMode-btn {
+  width: 40px;
+  background: white;
+  border: 2px solid #61DAFB;
+  border-radius: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.darkMode-btn .mode {
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+}
+
+.lightMode-btn {
+  width: 40px;
+  background: black;
+  border: 2px solid rgb(31, 31, 221);
+  border-radius: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lightMode-btn .mode {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
 }
 
 .main {
   color: white;
   padding: 55px;
+  background: #282D35;
+  background-image: url("./images/react-icon-large.png");
+  background-repeat: no-repeat;
+  background-position: right 75%;
+}
+
+.main-light {
+  color: black;
+  padding: 55px;
+  background: white;
   background-image: url("./images/react-icon-large.png");
   background-repeat: no-repeat;
   background-position: right 75%;
@@ -65,7 +142,21 @@ body {
   padding-block: 10px;
 }
 
-li::marker {
+.main--facts li::marker {
   font-size: 1.4rem;
   color: #61DAFB;
   }
+
+  .light-main--facts {
+    margin-top: 46px;
+    max-width: 400px;
+  }
+  
+  .light-main--facts > li {
+    padding-block: 10px;
+  }
+
+.light-main--facts li::marker {
+    font-size: 1.4rem;
+    color: rgb(31, 31, 221);
+    }
